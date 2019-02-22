@@ -6,6 +6,11 @@ pipeline {
         powershell 'C:\\Users\\barros\\Desktop\\PowerShell\\FetchLifeTimeData.ps1'
       }
     }
+    stage('DeployLatestTagsToTargetEnv') {
+      steps {
+        powershell 'C:\\Users\\barros\\Desktop\\PowerShell\\DeployLatestTagsToTargetEnv.ps1'
+      }
+    }
   }
   environment {
     LifeTimeUrl = 'https://pmdemo2-lt.outsystemsenterprise.com/'
