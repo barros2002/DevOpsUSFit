@@ -6,5 +6,10 @@ pipeline {
         sleep 1
       }
     }
+    stage('FetchLifeTimeData') {
+      steps {
+        powershell 'C:\\Users\\barros\\Desktop\\PowerShell\\FetchLifeTimeData.ps1'
+      }
+    }
   }
 }
